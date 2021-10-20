@@ -1,0 +1,18 @@
+
+
+
+<%= form_with model: @friendship do |form| %>
+  <div>
+    <%= form.label :username%><br>
+    <%= form.text_field :username%>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
