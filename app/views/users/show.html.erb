@@ -1,0 +1,34 @@
+<h4>User Data</h4>
+<div class = "user-page-content">
+  <p>Id  :<%= @user.id %></p>
+  <p>First_Name  :<%= @user.username %></p>
+ 
+  <p>Email  :<%= @user.email %></p>
+</div>
+
+<!--
+Hello my my email is <%= @user.email %>
+<% if user_signed_in? %>
+   <li>
+<%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+
+   <li><%= link_to 'All Users', users_path %>     
+</li>
+<% else %>
+<li>
+<%= link_to('Login', new_user_session_path)  %>  
+</li>
+<% end %>
+<ul>
+
+<% current_user.friend_requests.each do |request| %>
+<h4>You have new friend requests from:</h4>
+<li>
+  <%= User.find(request.friend_id).email %>
+  <%= link_to "Accept",  friend_request_path(friend_id: @friend),method:"put"   %>  
+  <%= link_to "Decline", "#" %>
+</li>
+<% end %>
+</ul>
+-->
+
